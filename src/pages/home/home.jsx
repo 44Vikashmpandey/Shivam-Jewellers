@@ -1,11 +1,14 @@
 import Carousel from 'react-bootstrap/Carousel';
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import sjimg1 from '../../public/sjimg1.webp'
-import sjimg2 from '../../public/sjimg2.webp'
-import sjimg3 from '../../public/sjimg3.webp'
+import sjimg1 from '/public/sjimg1.webp'
+import sjimg2 from '/public/sjimg2.webp'
+import sjimg3 from '/public/sjimg3.webp'
+// import CategoryNav from './categoryNav';
 function Home() {
     return (
-        <Carousel fade>
+      <>
+      {/* <CategoryNav/> */}
+      <Carousel fade>
           <Carousel.Item>
             {/* <ExampleCarouselImage text="First slide" /> */}
             <img
@@ -48,6 +51,8 @@ function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+      </>
+        
       );
 }
 

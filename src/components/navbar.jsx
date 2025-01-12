@@ -1,5 +1,5 @@
 
-import sjlogo from '../../public/sj logo.jpg'
+import sjlogo from '/public/sj logo.jpg'
 
 
 
@@ -9,12 +9,20 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import AppRouting from '../routers/routes';
+import Footer from './footer';
+import CategoryNav from '../pages/home/categoryNav';
+import { useLocation } from 'react-router-dom';
 
 function NavScrollExample() {
+
+  const location = useLocation()
   return (
+    <>
+    <div>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
             <img
               alt=""
               src={sjlogo}
@@ -31,8 +39,9 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Contact Us</Nav.Link>
+            {/* <span>{location.pathname}</span> */}
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/contactus">Contact Us</Nav.Link>
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -55,11 +64,20 @@ function NavScrollExample() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button> */}
-            <span>Shivam Jewellers</span>
+            {/* <span>Shivam Jewellers</span> */}
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    {location.pathname == '/' || location.pathname == '/home' ? <CategoryNav/> : ''}
+    </div>
+    <div className='m-2'>
+      <AppRouting/>
+    </div>
+    <div>
+      <Footer/>
+    </div>
+    </>
   );
 }
 
