@@ -5,8 +5,8 @@ import { Route, Routes } from "react-router-dom"
 // import AppPaths from "./path"
 // import PageNotFound from "../component/pageNotFound"
 
-import Contactus from "../pages/contactUs"
-import Home from "../pages/home/home"
+import Contactus from "../pages/contactus"
+import Home from "../pages/home"
 import AllJewelleryList from "../pages/Jewellery"
 // import NavScrollExample from "../components/navbar"
 
