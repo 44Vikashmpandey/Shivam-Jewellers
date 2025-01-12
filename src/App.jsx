@@ -4,7 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
-import Home from './pages/home'
+import Home from './pages/home/home'
+import AppRouting from './routers/routes'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,13 +14,12 @@ function App() {
   return (
     <>
      
-      <NavBar/>&nbsp;&nbsp;
-      <Home/>
+      <BrowserRouter>
+      <NavBar/>
+      {/* <AppRouting/> */}
       
-      {' '} &nbsp;
-      {' '} &nbsp;
-      {' '} &nbsp;
-      <Footer/>
+      {/* <Footer/> */}
+      </BrowserRouter>
     </>
   )
 }
