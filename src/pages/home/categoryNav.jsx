@@ -19,7 +19,7 @@ function CategoryNav() {
     <Navbar expand="lg" className='bg-body-tertiary'>
       <Container fluid>
       <Navbar.Brand>
-           <Link to={`/${'All'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>All Jewellery </Link>
+           All Jewellery
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -31,13 +31,13 @@ function CategoryNav() {
             {/* /:name/Products */}
             <Nav.Link href="#"><Link to={`/${'Gold'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Gold</Link></Nav.Link>
             <Nav.Link href="#"> <Link to={`/${'Silver'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Silver</Link> </Nav.Link>
-            <Nav.Link href="#"> <Link to={`/${'EarRings'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>EarRings</Link> </Nav.Link>
-            <Nav.Link href="#"> <Link to={`/${'Rings'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Rings</Link> </Nav.Link>
-            <Nav.Link href="#"> <Link to={`/${'1 Gm Gold'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>1 Gm Gold</Link> </Nav.Link>
+            {/* <Nav.Link href="#"> <Link to={`/${'EarRings'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>EarRings</Link> </Nav.Link>
+            <Nav.Link href="#"> <Link to={`/${'Rings'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Rings</Link> </Nav.Link> */}
+            <Nav.Link href="#"> <Link to={`/${'1GmGold'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>1GmGold</Link> </Nav.Link>
             <Nav.Link href="#"> <Link to={`/${'Wedding'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Wedding</Link> </Nav.Link>
             <Nav.Link href="#"> <Link to={`/${'Gift'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Gift</Link> </Nav.Link>
             <Nav.Link href="#"> <Link to={`/${'Imitation'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Imitation</Link> </Nav.Link>
-            <Nav.Link href="#"> <Link to={`/${'Fasion'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Fasion</Link> </Nav.Link>
+            <Nav.Link href="#"> <Link to={`/${'Fashion'}/Products`} style={{ textDecoration: "none", color: "inherit" }}>Fashion</Link> </Nav.Link>
             {/* <Nav.Link href="#">Contact Us</Nav.Link> */}
           </Nav>
           

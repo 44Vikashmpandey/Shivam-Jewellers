@@ -26,19 +26,19 @@ const Footer = () => {
               Shivam Jewellers <br />
               Gandhi, Sikhapur market, Danupur road, Gopiganj, Bhadohi <br />
               <PhoneCall/> +91-7007694322, +91-9794958826 <br />
-              <Mail/> info@shivamjewellers.com
+              <Mail/> shivamjwellerssj@gmail.com
             </p>
           </Col>
           <Col md={4}>
             <h5>Follow Us On</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#home" className="text-white text-decoration-none">
+                <a href="#" className="text-white text-decoration-none">
                   <Facebook/> Facebook
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white text-decoration-none">
+                <a href="https://www.instagram.com/shivamjwellerssj/" target="_blank" className="text-white text-decoration-none">
                  <Instagram/> Instagram
                 </a>
               </li>
