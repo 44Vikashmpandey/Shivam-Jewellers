@@ -12,15 +12,26 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import AppRouting from '../routers/routes';
 import Footer from './footer';
 import CategoryNav from '../pages/home/categoryNav';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function NavScrollExample() {
 
   const location = useLocation()
   return (
     <>
-    <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <div className='' style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        backgroundColor: "#eee",
+        color: "#fff",
+        padding: "1rem",
+        zIndex: 1000,
+        boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.2)",
+      }}
+      >
+    <Navbar expand="lg" className="bg-body-tertiary" >
       <Container fluid>
       <Navbar.Brand href="/">
             <img
@@ -39,22 +50,10 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            {/* <span>{location.pathname}</span> */}
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/contactus">Contact Us</Nav.Link>
-            {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link> */}
+            
+            <Nav.Link href="/home"><Link to="home" style={{ textDecoration: "none", color: "inherit" }}>Home</Link></Nav.Link>
+            <Nav.Link href="/contactus"><Link to="contactus" style={{ textDecoration: "none", color: "inherit" }}>Contact Us</Link></Nav.Link>
+            
           </Nav>
           <Form className="d-flex">
             {/* <Form.Control
@@ -69,13 +68,17 @@ function NavScrollExample() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    {location.pathname == '/' || location.pathname == '/home' ? <CategoryNav/> : ''}
-    </div>
-    <div className='m-2'>
-      <AppRouting/>
+    
+    {location.pathname != '/contactus' ? <CategoryNav/> : ''}
     </div>
     <div>
-      <Footer/>
+    {/* {location.pathname == '/' || location.pathname == '/home' ? <CategoryNav/> : ''} */}
+    </div>
+    <div className='m-2'>
+      {/* <AppRouting/> */}
+    </div>
+    <div>
+      {/* <Footer/> */}
     </div>
     </>
   );

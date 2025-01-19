@@ -8,6 +8,7 @@ function Home() {
     return (
       <>
       {/* <CategoryNav/> */}
+      <div style={{marginTop:'4rem', padding:'1rem'}}>
       <Carousel fade>
           <Carousel.Item>
             {/* <ExampleCarouselImage text="First slide" /> */}
@@ -51,6 +52,7 @@ function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+      </div>
       </>
         
       );

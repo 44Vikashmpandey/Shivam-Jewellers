@@ -32,9 +32,6 @@ const Contactus = () => {
             formData.phoneNumber = ''
             formData.description = ''
 		})
-        // console.log("Form Submitted", formData);
-        // alert("Form Submitted Successfully!");
-        // sendEmail()
       };
 
 

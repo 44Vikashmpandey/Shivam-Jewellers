@@ -8,12 +8,13 @@ import { Route, Routes } from "react-router-dom"
 import Contactus from "../pages/contactus"
 import Home from "../pages/home"
 import AllJewelleryList from "../pages/Jewellery"
+import Layout from "../Layouts/layout"
 // import NavScrollExample from "../components/navbar"
 
 const AppPaths = [
     {
         path : '/',
-        component: <Home/>
+        component: <Layout/>
     },
     {
       path : '/home',
@@ -65,6 +66,7 @@ const AppRouting = () => {
         {/* <NavScrollExample/> */}
         {paths.map((data, index) => {
             return (
+              
                 <Route exact  path={data.path} element={data.component} key={index} />
             )
         })}
