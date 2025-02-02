@@ -61,7 +61,7 @@ const AllJewelleryList = () => {
         if(imageList || Object.values(imageList).length > 0) {
             return (
                 <h1 style={{ marginTop: "4rem", padding: "1rem",textAlign: "left", fontFamily: "'Playfair Display', serif", fontSize: "2.5rem",  }}>
-                Sorry, {name} jewellery colloections out of stock.
+                Sorry, {name} jewellery collection out of stock.
             </h1>
             )
         }
