@@ -1,15 +1,9 @@
 import { Route, Routes } from "react-router-dom"
-// import AppPaths from "./path"
-// import PageNotFound from "../component/pageNotFound"
-// import TestRouting from "./path"
-// import AppPaths from "./path"
-// import PageNotFound from "../component/pageNotFound"
-
-import Contactus from "../pages/contactus"
-import Home from "../pages/home"
-import AllJewelleryList from "../pages/Jewellery"
-import Layout from "../Layouts/layout"
-// import NavScrollExample from "../components/navbar"
+import React, { Suspense } from "react"
+const Layout = React.lazy(() => import("../Layouts/layout"));
+const Home = React.lazy(() => import("../pages/home/"));
+const AllJewelleryList = React.lazy(() => import("../pages/Jewellery"));
+const Contactus = React.lazy(() => import("../pages/contactus"));
 
 const AppPaths = [
     {
@@ -29,26 +23,7 @@ const AppPaths = [
       component : <AllJewelleryList/>
     }
 
-    // {
-    //     path : '/admin/:id/:name',
-    //     component: <Amdin />
-    // },
-    // {
-    //     path : '/home',
-    //     component: <Home />
-    // },
-    // {
-    //     path : '/about',
-    //     component: <About />
-    // },
-    // {
-    //     path : '/dashboard',
-    //     component: <DashBoard />
-    // },
-    // {
-    //     path : '/page-not-found',
-    //     component: <PageNotFound />
-    // }
+    
 ]
 
 
@@ -56,26 +31,18 @@ const AppRouting = () => {
     const paths  = AppPaths
     return (
         <>
+        <Suspense fallback={<div>Loading....</div>}>
+
         <Routes>
-        {/* <Route path="/" element={<Home />}/>
-        <Route path="/admin" element={<Amdin />}/>
-        <Route path="/home" element={ <Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/dashboard" element={<DashBoard />}/> */}
-        {/* <Route element={<NavScrollExample/>}/> */}
-        {/* <NavScrollExample/> */}
         {paths.map((data, index) => {
             return (
               
                 <Route exact  path={data.path} element={data.component} key={index} />
             )
         })}
-        {/* <Route path="*" element={<PageNotFound />} /> */}
-        {/* <Route path="users" element={<Users />}>
-          <Route path="me" element={<OwnUserProfile />} />
-          <Route path=":id" element={<UserProfile />} />
-        </Route> */}
       </Routes>
+
+        </Suspense>
         </>
     )
 }
